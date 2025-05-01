@@ -20,4 +20,20 @@ This document covers an attempt to cover the classic and new potential mechanism
 - GRPO RL Like method: having an annotated dataset on different trajectories for how to complete a joke/creative piece may help in the process of leaving the LLM freedom to learn the intermediate paths towards such resolutions. Reward hacking could be an issue as the intermediate steps are hard to evaluate (mainly we could consider the use of an LLM as a judge to achieve it).
 - Formalization of the creative writing: letting an LLM to write a critic of the creative writing in the shape of a Chain of Thought and then asking another to eval it and provide feedback to enhance it, may lead to a flywheel towards achieving improvements in the same manner as we have seen in STEM, in which the measuring of both intermediate and final solutions is easier.
 
-# 
+## GRPO RL Like method:
+This mechanism can use the result from a formalization of the creative writing; as well as use learning signals from DPO datasets or similar on the expected results from the model.
+
+In this case, instead of having a definite answer, the LLM has a valid answer that it needs to reason to get there. It may try to do reward hacking in the process, thus the value of an LLM evaluating the intermediate steps CoT that are produced. It is very likely that there is a need of a big model to work on this topics as a judge.
+
+## Formalization of the creative writing
+In this case, the LLm is asked to "reason" about different paths that the creative writing could take; the LLM is given a topic, and certain guidelines to follow during the creative writing process. Once such creative work is done, the LLM is asked to create a logic formalization of the writing; something that can be introduced in a logic engine to be scored and validated.
+
+This is nothing new, but the use of classic Aristotles Logic and evaluation of propositional logic; this may be extended: some research has given ideas in the field of logic like introducing "Time" in the resolution of the logic proposition, in a similar manner as how a finite automata is executed.
+
+As potential frameworks to achieve it: PyReason and Prolog. Other alternatives are viable as soon as similar capabilities are provided.
+
+# Experiments
+With this being said; the preliminary experiments go in hand with trying to make the LLM reason about the intermediate steps towards the expected result; even though, there is no mathematical/formal way of proving that each step is valid, an LLM or human in the loop can evaluate such steps from the chain of thought. At this stage, I have to say that the involved process seems to be like the classic way of doing RLHF, somehow, the difficulty comes from the used mechanisms to evaluate the validity of each step of the model.
+
+One could argue that one of the best ways of exploiting all these mechanisms is the use of all techniques together, to see how the results are improved; somehow, things get hard pretty fast, and there is a need to introduce new mechanisms to the mix iteratively.
+
