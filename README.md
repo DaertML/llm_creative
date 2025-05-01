@@ -19,6 +19,7 @@ It is an open secret, that as the proprietory LLMs improved in the STEM branches
 This document covers an attempt to cover the classic and new potential mechanisms to enhance the creative writing of an LLM:
 - GRPO RL Like method: having an annotated dataset on different trajectories for how to complete a joke/creative piece may help in the process of leaving the LLM freedom to learn the intermediate paths towards such resolutions. Reward hacking could be an issue as the intermediate steps are hard to evaluate (mainly we could consider the use of an LLM as a judge to achieve it).
 - Formalization of the creative writing: letting an LLM to write a critic of the creative writing in the shape of a Chain of Thought and then asking another to eval it and provide feedback to enhance it, may lead to a flywheel towards achieving improvements in the same manner as we have seen in STEM, in which the measuring of both intermediate and final solutions is easier.
+- Chain of Thought Reasoning: finetuning may not be necessary at all, as soon as the model is capable of reasoning about the problem using CoT, and using that CoT to evaluate as the different solutions are generated. This depends on the capabilities that the model already knows; as it is kind of an open problem to control the way the model reasons... at least with the same controlability as you get when you prompt a model that is not meant for reasoning (the thing is, if the model doesnt know about a new kind of jokes, or how you want it to eval the jokes, or whatever... it may be hard to give leave In Context Learning as the way to achieve it).
 
 ## GRPO RL Like method:
 This mechanism can use the result from a formalization of the creative writing; as well as use learning signals from DPO datasets or similar on the expected results from the model.
@@ -37,3 +38,7 @@ With this being said; the preliminary experiments go in hand with trying to make
 
 One could argue that one of the best ways of exploiting all these mechanisms is the use of all techniques together, to see how the results are improved; somehow, things get hard pretty fast, and there is a need to introduce new mechanisms to the mix iteratively.
 
+Two examples on how the thing with CoT in the prompt works are provided: one to validate the validity of a philosophical argument, another to create funny jokes. The QwQ:32b model isnt prompted with anything fancy but a simple query to do the thing; it is expected that we can get better with clever prompting.
+
+# Motivation
+The motivation here is to push the capabilities of the LLMs in fields that are hard to eval, or that at least are hard to get a common solution for; that is: anything outside of STEM, or for which you know the answer. The main motivation for this is to try mechanisms that have been attempted before and are in use in STEM fields, to solve problems out of STEM. Seeing how greatly such mechanisms perform in STEM, it is to be expected that we can push the boundaries.
