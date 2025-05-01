@@ -42,3 +42,10 @@ Two examples on how the thing with CoT in the prompt works are provided: one to 
 
 # Motivation
 The motivation here is to push the capabilities of the LLMs in fields that are hard to eval, or that at least are hard to get a common solution for; that is: anything outside of STEM, or for which you know the answer. The main motivation for this is to try mechanisms that have been attempted before and are in use in STEM fields, to solve problems out of STEM. Seeing how greatly such mechanisms perform in STEM, it is to be expected that we can push the boundaries.
+
+# New avenues
+It is very likely that finding a flywheel in these fields may bring us way closer to AGI; as novel research works are only verifiable at the end of the work, something that takes a lot of out gambles from the researchers doing the work: hypothesis proposal, experimenting, reporting, validating...
+
+If one thinks about it even in STEM there is a need for "wording", much more than for writing logical statements and proofs; such wording needs a mechanism that analyzes different paths of resolution and ways for evaluating such paths without the use of a solution comparison at the end of the process.
+
+Determining that something is funny or not brings the need of different evaluation methods to validate the solution; something that is not needed in STEM as experiments are easy to evaluate for correctness.
